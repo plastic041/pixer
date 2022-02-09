@@ -24,8 +24,10 @@
 
 <style>
   .container {
-    width: 400px;
-    height: 400px;
+    width: 320px;
+    max-width: 600px;
+    height: 320px;
+    max-height: 600px;
     display: flex;
     margin: 0 auto;
     justify-content: center;

@@ -1,8 +1,6 @@
 <script>
-  import { grid } from "~/stores/stores";
   import { page } from "$app/stores";
   const text = $page.url.pathname.slice(1);
-  console.log(text);
 </script>
 
 <svelte:head>
