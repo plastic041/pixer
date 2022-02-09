@@ -14,17 +14,29 @@
 
 <Keys />
 <main class="container">
-  <Palette />
-  <Preview />
+  <div class="header">
+    <Palette />
+    <Preview />
+  </div>
   <Grid />
 </main>
 
 <style>
   .container {
+    padding: 1rem 0;
     display: flex;
     flex-direction: column;
+    gap: 1rem;
     margin: 0 auto;
-    min-width: 400px;
+    width: 400px;
     max-width: 600px;
+  }
+
+  .header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 </style>

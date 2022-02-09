@@ -3,7 +3,7 @@
   import { grid } from "~/stores/stores";
 </script>
 
-<div class="preview-container">
+<div class="container">
   <div
     class="preview-grid"
     style:--grid-width={SETTINGS.WIDTH}
@@ -19,21 +19,19 @@
 </div>
 
 <style>
-  .preview-container {
-    width: 80px;
-    height: 80px;
+  .container {
     display: flex;
-    margin: 0 auto;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
 
   .preview-grid {
-    width: 100%;
-    height: 100%;
     padding: 0.5rem;
     border: 2px solid black;
     display: grid;
+    width: 100px;
+    height: 100px;
     grid-gap: 0;
     grid-template-columns: repeat(var(--grid-width), 1fr);
     grid-template-rows: repeat(var(--grid-height), 1fr);
