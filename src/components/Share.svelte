@@ -5,7 +5,7 @@
   $: newURL = `${$page.url.origin}#${$grid}`;
 
   const onClick = () => {
-    navigator.clipboard.writeText($grid);
+    navigator.clipboard.writeText(newURL);
   };
 </script>
 
