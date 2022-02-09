@@ -1,6 +1,6 @@
 const SETTINGS = {
-  WIDTH: 8,
-  HEIGHT: 8,
+  WIDTH: 16,
+  HEIGHT: 16,
   COLORS: [
     "#1a1c2c",
     "#5d275d",
