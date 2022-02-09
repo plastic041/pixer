@@ -1,5 +1,8 @@
 <script>
   import { grid } from "~/stores/stores";
+  import { page } from "$app/stores";
+  const text = $page.url.pathname.slice(1);
+  console.log(text);
 </script>
 
 <svelte:head>
@@ -22,7 +25,7 @@
   />
   <meta
     property="og:image"
-    content={`https://og-image-theta-ruddy.vercel.app/${$grid}.jpeg?size=16`}
+    content={`https://og-image-theta-ruddy.vercel.app/${text}.jpeg?size=16`}
   />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://pixer-phi.vercel.app/" />
@@ -36,6 +39,6 @@
   />
   <meta
     property="twitter:image"
-    content={`https://og-image-theta-ruddy.vercel.app/${$grid}.jpeg?size=16`}
+    content={`https://og-image-theta-ruddy.vercel.app/${text}.jpeg?size=16`}
   />
 </svelte:head>
