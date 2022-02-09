@@ -1,4 +1,3 @@
-import type { Hex } from "~/typings/colors.js";
 import SETTINGS from "./settings.js";
 import { writable } from "svelte/store";
 
