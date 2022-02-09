@@ -3,6 +3,8 @@
   import Palette from "~/components/Palette.svelte";
   import Preview from "~/components/Preview.svelte";
   import Keys from "~/components/Keys.svelte";
+  import Head from "~/components/Head.svelte";
+  import Share from "~/components/Share.svelte";
 </script>
 
 <svelte:head>
@@ -12,6 +14,7 @@
   />
 </svelte:head>
 
+<Head />
 <Keys />
 <main class="container">
   <div class="header">
@@ -19,9 +22,14 @@
     <Preview />
   </div>
   <Grid />
+  <Share />
 </main>
 
 <style>
+  :global(body) {
+    font-family: sans-serif;
+  }
+
   .container {
     padding: 1rem 0;
     display: flex;
