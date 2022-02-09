@@ -1,7 +1,7 @@
 <script lang="ts">
   import Cell from "~/components/Cell.svelte";
   import SETTINGS from "~/stores/settings";
-  import { grid, currentColorHex, cursor } from "~/stores/stores";
+  import { grid, currentColorHex, cursor, size } from "~/stores/stores";
 
   const setCell = (index: number, colorIndex: string) => {
     const front = $grid.slice(0, index);
@@ -11,11 +11,7 @@
 </script>
 
 <div class="container">
-  <div
-    class="grid"
-    style:--grid-width={SETTINGS.WIDTH}
-    style:--grid-height={SETTINGS.HEIGHT}
-  >
+  <div class="grid" style:--grid-width={$size} style:--grid-height={$size}>
     {#each $grid as cell, index}
       <Cell
         color={SETTINGS.COLORS[parseInt(cell, 16)]}

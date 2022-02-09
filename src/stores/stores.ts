@@ -1,7 +1,11 @@
 import SETTINGS from "./settings.js";
 import { writable } from "svelte/store";
 
-export const grid = writable("c".repeat(SETTINGS.WIDTH * SETTINGS.HEIGHT));
+const makeGrid = () => "c".repeat(Number(SETTINGS.SIZE) ** 2);
+
+export const size = writable(SETTINGS.SIZE);
+
+export const grid = writable(makeGrid());
 
 export const currentColorHex = writable<string>("0");
 

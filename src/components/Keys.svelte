@@ -1,15 +1,15 @@
 <script lang="ts">
-  import { grid, cursor, currentColorHex } from "~/stores/stores";
+  import { grid, cursor, currentColorHex, size } from "~/stores/stores";
   import SETTINGS from "~/stores/settings";
 
   const updateCursor = (dirX: number, dirY: number) => {
-    const cursorX = $cursor % SETTINGS.WIDTH;
-    const cursorY = Math.floor($cursor / SETTINGS.WIDTH);
+    const cursorX = $cursor % Number($size);
+    const cursorY = Math.floor($cursor / Number($size));
 
-    const newX = (cursorX + SETTINGS.WIDTH + dirX) % SETTINGS.WIDTH;
-    const newY = (cursorY + SETTINGS.HEIGHT + dirY) % SETTINGS.HEIGHT;
+    const newX = (cursorX + Number($size) + dirX) % Number($size);
+    const newY = (cursorY + Number($size) + dirY) % Number($size);
 
-    const newCursor = newY * SETTINGS.WIDTH + newX;
+    const newCursor = newY * Number($size) + newX;
     cursor.set(newCursor);
   };
 

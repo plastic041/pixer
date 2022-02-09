@@ -1,13 +1,13 @@
 <script>
   import SETTINGS from "~/stores/settings";
-  import { grid } from "~/stores/stores";
+  import { grid, size } from "~/stores/stores";
 </script>
 
 <div class="container">
   <div
     class="preview-grid"
-    style:--grid-width={SETTINGS.WIDTH}
-    style:--grid-height={SETTINGS.HEIGHT}
+    style:--grid-width={$size}
+    style:--grid-height={$size}
   >
     {#each $grid as cell, index}
       <div
