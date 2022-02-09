@@ -8,10 +8,6 @@
     const rear = $grid.slice(index + 1);
     grid.set(`${front}${colorIndex}${rear}`);
   };
-
-  grid.subscribe((g) => {
-    console.log(g);
-  });
 </script>
 
 <div class="container">
@@ -46,7 +42,6 @@
     padding: 1rem;
     border: 2px solid black;
     background-color: #fff;
-    border-radius: 0.5rem;
     display: grid;
     grid-gap: 1px;
     grid-template-columns: repeat(var(--grid-width), 1fr);
