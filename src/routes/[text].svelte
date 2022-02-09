@@ -14,17 +14,17 @@
   };
 
   const redirect = () => {
-    const newURL = `${$page.url.origin}#${$grid}`;
+    const newURL = `${$page.url.origin}/${$grid}`;
     goto(newURL, { replaceState: true, noscroll: true, keepfocus: true });
   };
 
   $: if (browser) {
-    redirect;
+    grid.subscribe(() => debounce(redirect, 500));
   }
 
   onMount(() => {
-    const text = $page.url.hash.slice(1);
-    text && grid.set(text);
+    const text = $page.params.text;
+    grid.set(text);
   });
 </script>
 

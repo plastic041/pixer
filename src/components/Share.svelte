@@ -2,7 +2,7 @@
   import { grid } from "~/stores/stores";
   import { page } from "$app/stores";
 
-  $: newURL = `${$page.url.origin}#${$grid}`;
+  $: newURL = `${$page.url.origin}/${$grid}`;
 
   const onClick = () => {
     navigator.clipboard.writeText(newURL);
