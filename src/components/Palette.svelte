@@ -1,7 +1,6 @@
 <script lang="ts">
   import SETTINGS from "~/stores/settings";
   import { currentColorHex } from "~/stores/stores";
-  import type { Hex } from "~/typings/colors";
 </script>
 
 <div class="container">
