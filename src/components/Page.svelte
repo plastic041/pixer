@@ -5,6 +5,7 @@
   import Keys from "~/components/Keys.svelte";
   import Head from "~/components/Head.svelte";
   import Share from "~/components/Share.svelte";
+  import Header from "~/components/Header.svelte";
 </script>
 
 <svelte:head>
@@ -17,6 +18,7 @@
 <Head />
 <Keys />
 <main class="container">
+  <Header />
   <div class="header">
     <Palette />
     <Preview />
